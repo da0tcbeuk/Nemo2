@@ -3,15 +3,15 @@
 
 <h3>記事を検索</h3>
 <div class="searchBox">
- <%= form_tag, method: root_path, method: :get do %>
-    <input class="searchInput"type="text" name="" placeholder="Search">
-      <button class="searchButton" href="#">
-          <i class="material-icons">
-             search
-          </i>
-      </button>
- <% end %>
-</div>
+<%= form_tag({controller:"deus",action:"index"}, method: :get) do %>
+            <input class="searchInput"type="text" name="" placeholder="Search">
+            <button class="searchButton" href="#">
+                <i class="material-icons">
+                    search
+                </i>
+            </button>
+<% end %>
+            </div>
  
 <%= form_tag({controller:"deus",action:"index"}, method: :get) do %>
   <% @tags.each do |t| %>
@@ -63,7 +63,7 @@
          <% end %>
          <li class="nav-item active">
          <%= link_to "詳細へ", deu_path(t.id), class: "nav-link" %>
-         </li>
+         
          <%= image_tag t.user.image_url, size: "83x67" if t.user.image? %>
          
       </div>
