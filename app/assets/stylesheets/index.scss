@@ -110,21 +110,3 @@ html {
 }
 
 // Center & dribbble
-body {
-  min-height: 100vh;
-  font-family: 'Mukta Malar', Arial;
-  background: #F3628D;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .dribbble {
-      position: fixed;
-      display: block;
-      right: 24px;
-      bottom: 24px;
-      img {
-          display: block;
-          width: 76px;
-      }
-  }
-}
