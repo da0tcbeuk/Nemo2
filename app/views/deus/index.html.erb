@@ -4,15 +4,19 @@
 <h3>記事を検索</h3>
 <div class="searchBox">
 <%= form_tag({controller:"deus",action:"index"}, method: :get) do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag '検索する'  %>
+<% end %>
+<%= form_tag({controller:"deus",action:"index"}, method: :get) do %>
             <input class="searchInput"type="text" name="" placeholder="Search">
-            <button class="searchButton" href="#">
+            <%= button class="searchButton" href="#" %>
                 <i class="material-icons">
                     search
                 </i>   
-            </button>
+            <% end %>
             </input>
 <% end %>
-            </div>
+</div>
  
 <%= form_tag({controller:"deus",action:"index"}, method: :get) do %>
   <% @tags.each do |t| %>
