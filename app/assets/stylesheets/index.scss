@@ -35,78 +35,58 @@ body {
   font-size: 30px;
 }
 
-.search {
-  display: table;
-  input {
-      background: none;
-      border: none;
-      outline: none;
-      width: 28px;
-      min-width: 0;
-      padding: 0;
-      z-index: 1;
-      position: relative;
-      line-height: 18px;
-      margin: 5px 0;
-      font-size: 14px;
-      -webkit-appearance: none;
-      font-family: 'Mukta Malar';
-      transition: all .6s ease;
-      cursor: pointer;
-      
-      & + div {
-          position: relative;
-          height: 28px;
-          width: 100%;
-          margin: -28px 0 0 0;
-          svg {
-              display: block;
-              position: absolute;
-              height: 28px;
-              width: 160px;
-              right: 0;
-              top: 0;
-              fill: none;
-              
-              stroke-width: 1.5px;
-              stroke-dashoffset: 212.908 + 59;
-              stroke-dasharray: 59 212.908;
-              transition: all .6s ease;
-          }
-      }
-      &:not(:placeholder-shown),
-      &:focus {
-          width: 160px;
-          padding: 0 4px;
-          cursor: text;
-          &+ div {
-              svg {
-                  stroke-dasharray: 150 212.908;
-                  stroke-dashoffset: 300;
-              }
-          }
-      }
-  }
+.searchBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:  translate(-50%,50%);
+  background: #2f3640;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+
 }
 
-::selection {
-  background: rgba(#fff, .2);
-}
-::-moz-selection {
-  background: rgba(#fff, .2);
+.searchBox:hover > .searchInput {
+  width: 240px;
+  padding: 0 6px;
 }
 
-html {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
+.searchBox:hover > .searchButton {
+background: white;
+color : #2f3640;
 }
 
-* {
-  box-sizing: inherit;
-  &:before,
-  &:after {
-      box-sizing: inherit;
-  }
+.searchButton {
+  color: white;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
 }
 
-// Center & dribbble
+.searchInput {
+  border:none;
+  background: none;
+  outline:none;
+  float:left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+  width: 150px;
+  padding: 0 6px;
+}
+}
