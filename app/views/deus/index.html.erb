@@ -10,10 +10,7 @@
     <span class="close" onclick="searchToggle(this, event);"></span>
 </div>
 
-<%= form_tag({controller:"deus",action:"index"}, method: :get) do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag '検索する'  %>
-  <% end %>
+
 <%= form_tag({controller:"deus",action:"index"}, method: :get) do %>
   <% @tags.each do |t| %>
       <li><%= check_box :tag_ids, t.name %><%= t.name %></li>
