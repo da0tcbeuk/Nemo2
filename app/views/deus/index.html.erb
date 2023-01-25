@@ -2,6 +2,14 @@
 <%= stylesheet_link_tag 'index', :media => "all" %>
 
 <h3>記事を検索</h3>
+<div class="search-wrapper">
+    <div class="input-holder">
+        <input type="text" class="search-input" placeholder="Type to search" />
+        <button class="search-icon" onclick="searchToggle(this, event);"><span></span></button>
+    </div>
+    <span class="close" onclick="searchToggle(this, event);"></span>
+</div>
+
 <%= form_tag({controller:"deus",action:"index"}, method: :get) do %>
   <%= text_field_tag :search %>
   <%= submit_tag '検索する'  %>

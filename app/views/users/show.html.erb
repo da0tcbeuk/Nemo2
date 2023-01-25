@@ -4,10 +4,11 @@
 <%= image_tag @user.image_url, size: "250x200" if @user.image? %>
 
 <p>プロフィール : <%= @user.profile %></p>
-
+<li class="nav-item active">
 <% if current_user.id == @user.id %>
-  <%= link_to "編集する", edit_user_registration_path %>
+  <%= link_to "編集する", edit_user_registration_path, class: "nav-link" %> %>
 <% end %>
+</li>
 <%= link_to "記事一覧に戻る", deus_path %>
 <%= link_to "いいね一覧", user_like_path %>
 
