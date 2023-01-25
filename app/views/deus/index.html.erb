@@ -3,13 +3,14 @@
 
 <h3>記事を検索</h3>
 <div class="searchBox">
-<%= form_tag({controller:"deus",action:"index"}, method: :get) do %>
-            <input class="searchInput"type="text" name="" placeholder="Search">
-            <button class="searchButton" href="#">
-                <i class="material-icons">
-                    search
-                </i>
-            </button>
+ <%= form_tag, method: root_path, method: :get do %>
+    <input class="searchInput"type="text" name="" placeholder="Search">
+      <button class="searchButton" href="#">
+          <i class="material-icons">
+             search
+          </i>
+      </button>
+ <% end %>
 </div>
  
 <%= form_tag({controller:"deus",action:"index"}, method: :get) do %>
