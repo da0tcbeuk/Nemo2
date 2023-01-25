@@ -60,8 +60,9 @@
         <% else %>
             <i class="far fa-heart"></i><%= t.likes.count %>
          <% end %>
-         
-         <%= link_to "詳細へ", deu_path(t.id) %>
+         <li class="nav-item active">
+         <%= link_to "詳細へ", deu_path(t.id), class: "nav-link" %>
+         </li>
          <%= image_tag t.user.image_url, size: "83x67" if t.user.image? %>
          
       </div>
