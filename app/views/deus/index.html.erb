@@ -3,7 +3,7 @@
 
 <h3>記事を検索</h3>
 <div class="searchBox">
-
+<%= form_tag({controller:"deus",action:"index"}, method: :get) do %>
             <input class="searchInput"type="text" name="" placeholder="Search">
             <button class="searchButton" href="#">
                 <i class="material-icons">
@@ -11,10 +11,7 @@
                 </i>
             </button>
 </div>
-# <%= form_tag({controller:"deus",action:"index"}, method: :get) do %>
-#  <%= text_field_tag :search %>
-#  <%= submit_tag '検索する'  %>
-# <% end %>
+ 
 <%= form_tag({controller:"deus",action:"index"}, method: :get) do %>
   <% @tags.each do |t| %>
       <li><%= check_box :tag_ids, t.name %><%= t.name %></li>
